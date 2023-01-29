@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebRTC PeerConnection</title>
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/layui.css" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <div class="layui-header">    
+    <label style="font-size: 20px">Room:</label>
+    <input class="layui-inline" type="text" id="room">
+    <button class="layui-btn layui-btn-sm" id="connserver">Connect</button>
+    <button class="layui-btn layui-btn-sm" id="leave" disabled>Leave</button>
+</div>
+<div>
+    <input id="shareDesk" type="checkbox"/><label for="shareDesk">Share Desktop</label>
+</div>
+<div>
+    <label style="font-size: 15px">audio Source:</label>
+    <select id="audioSource"></select>
+</div>
+<div>
+    <label style="font-size: 15px">audio Output:</label>
+    <select id="audioOutput"></select>
+</div>
+<div>
+    <label style="font-size: 15px">video Source:</label>
+    <select id="videoSource"></select>
+</div>
+
+
+<div  id="preview">
+        <div class="layui-col-xs6" >
+            <h2>Local:</h2>
+            <div>
+                <video id="localvideo" autoplay controls style="width: 320px;height: 240px"></video>
+            </div>
+        </div>
+        <div class="layui-col-xs6">
+            <h2>Remote:</h2>
+                <div>
+                   <video id="remotevideo" autoplay controls style="width: 320px;height: 240px"></video>
+                </div>
+        </div>
+
+</div>
+
+<div>
+    <table class="layui-table">
+        <tr>
+            <td>
+                <video playsinline id="recplayer" style="width: 320px;height: 240px"></video>
+            </td>
+            <td>
+                <canvas id="picture"></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td><button class="layui-btn-sm" id="record">Start Record</button></td>
+            <td><button class="layui-btn-sm" id="snapshot">Take snapshot</button></td>
+        </tr>
+        <tr>
+            <td><button class="layui-btn-sm" id="recplay" disabled>Play</button></td>
+            <td><button class="layui-btn-sm" id="download" disabled>Download</button></td>
+        </tr>
+    </table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

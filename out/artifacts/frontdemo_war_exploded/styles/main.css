@@ -1,0 +1,87 @@
+@charset "utf-8";
+.listtable{
+    width:100%;
+    border:1px solid #afafaf;
+    border-collapse:collapse;
+    margin-bottom:10px;
+}
+
+.listtable caption{
+    text-align:left;
+    font-size:16px;
+    padding:2px;
+    font-weight:bold;
+}
+
+.listtable td{
+    padding:5px;
+    border: 1px solid gray;
+    font-size:12px;
+    text-align:center;
+}
+
+.listtable tr:nth-child(2n){
+    background-color : #ebeaea;
+}
+
+.listtable .listheader{
+    background-color:skyblue;
+    text-align:center;
+}
+
+.listtable .listheader th{
+    padding:5px;
+    border: 1px solid gray;
+}
+
+.formtable {
+    padding: 10px;
+}
+
+.formtable td{
+    padding:15px;
+}
+
+.formtable tr td:first-child{
+    vertical-align:top;
+}
+
+.formtable input[type="radio"] + label{
+    margin-right:10px;
+}
+.formtable .td-first{
+    width: 45%;
+    text-align: right;
+}
+.formtable .td-second{
+    width: 55%;
+    text-align: left;
+}
+
+.formtable .command{
+    text-align: center;
+}
+
+
+.pager-header .header-info{
+    float:left;
+}
+
+.pager-header .header-info .info-number{
+    font-weight:bold;
+}
+
+.pager-header .header-nav{
+    float:right;
+}
+
+.pager-header .header-nav .nav-number{
+    width:30px;
+    margin:0 5px;
+}
+.error {
+    color:red;
+}
+.content-nav {
+    font-size: 20px;
+}
